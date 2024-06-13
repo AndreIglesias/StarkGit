@@ -14,7 +14,7 @@ This project addresses the lack of transparent and reliable methods for verifyin
 5. **Security Auditors**: Connect through cybersecurity conferences and groups, presenting the tool as a supplementary audit resource with blockchain verification.
 
 #### Demo Story
-Alice, a project maintainer, releases a new version of her project on GitHub. Upon the release, a GitHub Action triggers our AI tool to analyze the code for quality and security. The analysis results in a high-quality score and identifies no major security vulnerabilities, generating a digital certificate. This certificate is then automatically registered on the Starknet blockchain. Alice receives a notification with a link to the immutable certificate, which she shares with her contributors and users, proving the code's quality and security. This not only boosts confidence in her project but also attracts new contributors and users.
+Alice, a project maintainer, releases a new version of her project on GitHub. Upon the release, a GitHub App triggers our AI tool to analyze the code for quality and security. The analysis results in a high-quality score and identifies no major security vulnerabilities, generating a digital certificate. This certificate is then automatically registered on the Starknet blockchain. Alice receives a notification with a link to the immutable certificate, which she shares with her contributors and users, proving the code's quality and security. This not only boosts confidence in her project but also attracts new contributors and users.
 
 ### Project Plan for MVP/Prototype (3 Weeks)
 
@@ -42,7 +42,7 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
    - Design a simple digital certificate format (JSON).
    - Implement code to generate a certificate with analysis results and a hash.
 
-#### Week 3: Blockchain Integration and GitHub Action Setup
+#### Week 3: Blockchain Integration and GitHub App Setup
 
 5. **Blockchain Integration with Cairo & Starknet (3 days)**
    - Develop a basic Cairo smart contract for certificate registration.
