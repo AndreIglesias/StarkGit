@@ -44,14 +44,14 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
 
 #### Week 3: Blockchain Integration and GitHub Action Setup
 
-5. **Blockchain Integration with Cairo Starknet (3 days)**
+5. **Blockchain Integration with Cairo & Starknet (3 days)**
    - Develop a basic Cairo smart contract for certificate registration.
    - Set up the Starknet environment and deploy the contract.
    - Create a simple Python script to interact with the smart contract and register certificates.
 
-6. **GitHub Action Setup (2 days)**
-   - Develop a GitHub Action to automate code analysis and certificate registration upon code commits.
-   - Test the action with a sample GitHub repository.
+6. **GitHub App Setup (2 days)**
+   - Develop a GitHub App to automate code analysis and certificate registration upon new releases or updates to the master branch.
+   - Test the app with a sample GitHub repository.
 
 7. **Testing and Final Adjustments (2 days)**
    - Conduct end-to-end testing of the entire workflow.
