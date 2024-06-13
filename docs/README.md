@@ -1,7 +1,7 @@
 ### Project Details
 
 #### General Idea (2-3 sentences)
-We are developing a tool that uses AI to analyze and certify the quality and security of code hosted on GitHub, generating a digital certificate that is then registered on the blockchain using Cairo Starknet. This ensures that code quality and security assessments are transparent, immutable, and easily verifiable by anyone.
+We are developing a tool that uses AI to analyze and certify the quality and security of code hosted on GitHub, generating a digital certificate that is then registered on the blockchain using Cairo and the Starknet blockchain. This ensures that code quality and security assessments are transparent, immutable, and easily verifiable by anyone.
 
 #### What Problem Does It Solve
 This project addresses the lack of transparent and reliable methods for verifying the quality and security of code in software development. By leveraging AI for comprehensive analysis and blockchain for certification, it provides a trustworthy and tamper-proof solution for developers and organizations to demonstrate the integrity and security of their code.
@@ -14,7 +14,7 @@ This project addresses the lack of transparent and reliable methods for verifyin
 5. **Security Auditors**: Connect through cybersecurity conferences and groups, presenting the tool as a supplementary audit resource with blockchain verification.
 
 #### Demo Story
-Alice, a project maintainer, commits her latest code to GitHub. Upon the commit, a GitHub Action triggers our AI tool to analyze the code for quality and security. The analysis results in a high-quality score and identifies no major security vulnerabilities, generating a digital certificate. This certificate is then automatically registered on the Starknet blockchain. Alice receives a notification with a link to the immutable certificate, which she shares with her contributors and users, proving the code's quality and security. This not only boosts confidence in her project but also attracts new contributors and users.
+Alice, a project maintainer, releases a new version of her project on GitHub. Upon the release, a GitHub Action triggers our AI tool to analyze the code for quality and security. The analysis results in a high-quality score and identifies no major security vulnerabilities, generating a digital certificate. This certificate is then automatically registered on the Starknet blockchain. Alice receives a notification with a link to the immutable certificate, which she shares with her contributors and users, proving the code's quality and security. This not only boosts confidence in her project but also attracts new contributors and users.
 
 ### Project Plan for MVP/Prototype (3 Weeks)
 
