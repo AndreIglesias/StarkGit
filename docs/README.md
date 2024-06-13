@@ -20,7 +20,7 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
 
 **Milestones and Tasks for MVP**
 
-#### Week 1: Define Certification Criteria and Develop Basic AI Analysis Tool
+#### Week 1: Define Certification Criteria and Develop AI Analysis Tool
 
 1. **Define Certification Criteria (2 days)**
    - Select key metrics for quality and security (e.g., code cleanliness, common security vulnerabilities).
@@ -28,29 +28,23 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
 
 2. **Develop AI Analysis Tool (3 days)**
    - Select a pre-trained AI model from Hugging Face (e.g., `CodeBERT`).
-   - Implement basic code analysis functionality to check for cleanliness and a few common security issues.
+   - Implement code analysis functionality to check for cleanliness and a few common security issues.
    - Test the model with sample code snippets.
 
-#### Week 2: Integrate Static Analysis Tool and Create Certificate Generation Process
+#### Week 2: Create Certificate Generation Process && Blockchain Integration
 
-> [!NOTE]
-> 3. [Optional feature for MVP] **Integrate Static Analysis Tool (3 days)**
->   - Use a simple static analysis tool like `Codacy`, `Bandit`, `ESLint` or other.
->   - Integrate the tool to run alongside the AI model.
->   - Combine the results into a basic report.
-
-4. **Create Certificate Generation Process (2 days)**
+3. **Create Certificate Generation Process (2 days)**
    - Design a simple digital certificate format (JSON).
    - Implement code to generate a certificate with analysis results and a hash.
 
-#### Week 3: Blockchain Integration and GitHub App Setup
-
 5. **Blockchain Integration with Cairo & Starknet (3 days)**
-   - Develop a basic Cairo smart contract for certificate registration.
+   - Develop a Cairo smart contract for certificate registration.
    - Set up the Starknet environment and deploy the contract.
    - Create a simple Python script to interact with the smart contract and register certificates.
 
-6. **GitHub App Setup (2 days)**
+#### Week 3: GitHub App Setup
+
+6. **GitHub App Setup (3 days)**
    - Develop a GitHub App to automate code analysis and certificate registration upon new releases or updates to the master branch.
    - Test the app with a sample GitHub repository.
 
