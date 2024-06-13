@@ -34,7 +34,7 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
 #### Week 2: Integrate Static Analysis Tool and Create Certificate Generation Process
 
 3. **Integrate Static Analysis Tool (3 days)**
-   - Use a simple static analysis tool like `Bandit` for Python.
+   - Use a simple static analysis tool like `Codacy`, `Bandit`, `ESLint` or other.
    - Integrate the tool to run alongside the AI model.
    - Combine the results into a basic report.
 
