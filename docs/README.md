@@ -33,10 +33,11 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
 
 #### Week 2: Integrate Static Analysis Tool and Create Certificate Generation Process
 
-3. **Integrate Static Analysis Tool (3 days)**
-   - Use a simple static analysis tool like `Codacy`, `Bandit`, `ESLint` or other.
-   - Integrate the tool to run alongside the AI model.
-   - Combine the results into a basic report.
+> [!NOTE]
+> 3. [Optional feature for MVP] **Integrate Static Analysis Tool (3 days)**
+>   - Use a simple static analysis tool like `Codacy`, `Bandit`, `ESLint` or other.
+>   - Integrate the tool to run alongside the AI model.
+>   - Combine the results into a basic report.
 
 4. **Create Certificate Generation Process (2 days)**
    - Design a simple digital certificate format (JSON).
