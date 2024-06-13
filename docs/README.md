@@ -1,0 +1,63 @@
+### Project Details
+
+#### General Idea (2-3 sentences)
+We are developing a tool that uses AI to analyze and certify the quality and security of code hosted on GitHub, generating a digital certificate that is then registered on the blockchain using Cairo Starknet. This ensures that code quality and security assessments are transparent, immutable, and easily verifiable by anyone.
+
+#### What Problem Does It Solve
+This project addresses the lack of transparent and reliable methods for verifying the quality and security of code in software development. By leveraging AI for comprehensive analysis and blockchain for certification, it provides a trustworthy and tamper-proof solution for developers and organizations to demonstrate the integrity and security of their code.
+
+#### List of First 5 Users and How Do We Get Them
+1. **Open Source Project Maintainers**: Reach out through GitHub repositories and open source communities, offering free trials and emphasizing the security certification aspect.
+2. **Software Development Firms**: Engage through LinkedIn and professional networks, emphasizing benefits for client trust, internal quality assurance, and security.
+3. **Freelance Developers**: Target via freelancing platforms and forums, highlighting the tool as a way to enhance their portfolio with verified security assessments.
+4. **Educational Institutions**: Collaborate with universities and coding bootcamps to integrate the tool into their curriculum for teaching best practices in both quality and security.
+5. **Security Auditors**: Connect through cybersecurity conferences and groups, presenting the tool as a supplementary audit resource with blockchain verification.
+
+#### Demo Story
+Alice, a project maintainer, commits her latest code to GitHub. Upon the commit, a GitHub Action triggers our AI tool to analyze the code for quality and security. The analysis results in a high-quality score and identifies no major security vulnerabilities, generating a digital certificate. This certificate is then automatically registered on the Starknet blockchain. Alice receives a notification with a link to the immutable certificate, which she shares with her contributors and users, proving the code's quality and security. This not only boosts confidence in her project but also attracts new contributors and users.
+
+### Project Plan for MVP/Prototype (3 Weeks)
+
+**Milestones and Tasks for MVP**
+
+#### Week 1: Define Certification Criteria and Develop Basic AI Analysis Tool
+
+1. **Define Certification Criteria (2 days)**
+   - Select key metrics for quality and security (e.g., code cleanliness, common security vulnerabilities).
+   - Establish simple thresholds for these metrics.
+
+2. **Develop AI Analysis Tool (3 days)**
+   - Select a pre-trained AI model from Hugging Face (e.g., `CodeBERT`).
+   - Implement basic code analysis functionality to check for cleanliness and a few common security issues.
+   - Test the model with sample code snippets.
+
+#### Week 2: Integrate Static Analysis Tool and Create Certificate Generation Process
+
+3. **Integrate Static Analysis Tool (3 days)**
+   - Use a simple static analysis tool like `Bandit` for Python.
+   - Integrate the tool to run alongside the AI model.
+   - Combine the results into a basic report.
+
+4. **Create Certificate Generation Process (2 days)**
+   - Design a simple digital certificate format (JSON).
+   - Implement code to generate a certificate with analysis results and a hash.
+
+#### Week 3: Blockchain Integration and GitHub Action Setup
+
+5. **Blockchain Integration with Cairo Starknet (3 days)**
+   - Develop a basic Cairo smart contract for certificate registration.
+   - Set up the Starknet environment and deploy the contract.
+   - Create a simple Python script to interact with the smart contract and register certificates.
+
+6. **GitHub Action Setup (2 days)**
+   - Develop a GitHub Action to automate code analysis and certificate registration upon code commits.
+   - Test the action with a sample GitHub repository.
+
+7. **Testing and Final Adjustments (2 days)**
+   - Conduct end-to-end testing of the entire workflow.
+   - Make necessary adjustments based on test results.
+
+### Adjusted Goals for the MVP
+- **Focus on Basic Functionality**: Prioritize simple, core features for code analysis and blockchain registration.
+- **Leverage Existing Tools**: Use pre-built models and tools to minimize development time.
+- **Streamline the Workflow**: Ensure the workflow is straightforward and easy to demonstrate.
