@@ -16,13 +16,13 @@ This project addresses the lack of transparent and reliable methods for verifyin
 #### Demo Story
 Alice, a project maintainer, releases a new version of her project on GitHub. Upon the release, a GitHub App triggers our AI tool to analyze the code for quality and security. The analysis results in a high-quality score and identifies no major security vulnerabilities, generating a digital certificate. This certificate is then automatically registered on the Starknet blockchain. Alice receives a notification with a link to the immutable certificate, which she shares with her contributors and users, proving the code's quality and security. This not only boosts confidence in her project but also attracts new contributors and users.
 
-### Project Plan for MVP/Prototype (3 Weeks)
+### Project Plan for MVP/Prototype (3 Cycles: 14 days-plan)
 
 **Milestones and Tasks for MVP**
 
-#### Week 1: Define Certification Criteria and Develop AI Analysis Tool
+#### Cycle 1: Define Certification Criteria and Develop AI Analysis Tool
 
-1. **Define Certification Criteria (2 days)**
+1. **Define Certification Criteria (1 days)**
    - Select key metrics for quality and security (e.g., code cleanliness, common security vulnerabilities).
    - Establish simple thresholds for these metrics.
 
@@ -31,7 +31,7 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
    - Implement code analysis functionality to check for cleanliness and a few common security issues.
    - Test the model with sample code snippets.
 
-#### Week 2: Create Certificate Generation Process && Blockchain Integration
+#### Cycle 2: Create Certificate Generation Process && Blockchain Integration
 
 3. **Create Certificate Generation Process (2 days)**
    - Design a simple digital certificate format (JSON).
@@ -42,7 +42,7 @@ Alice, a project maintainer, releases a new version of her project on GitHub. Up
    - Set up the Starknet environment and deploy the contract.
    - Create a simple Python script to interact with the smart contract and register certificates.
 
-#### Week 3: GitHub App Setup
+#### Cycle 3: GitHub App Setup
 
 6. **GitHub App Setup (3 days)**
    - Develop a GitHub App to automate code analysis and certificate registration upon new releases or updates to the master branch.
