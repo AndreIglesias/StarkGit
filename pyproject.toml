@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "audit"
+version = "0.1.0"
+description = "AI Certified Audit"
+authors = ["AndreIglesias <ciglesia@student.42.fr>"]
+readme = "docs/README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+flask = "^3.0.3"
+jsonify = "^0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

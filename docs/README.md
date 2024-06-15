@@ -1,3 +1,26 @@
+# StarkGit
+
+AI Certified Audit on the Starknet Blockchian
+
+
+## How to run the app
+
+### Github probot app
+
+To run the server app that connects the repository with the AI server.
+
+```bash
+npm run build && npm start
+```
+
+### Python API Server (auditor)
+
+To run the Audit with AI server and upload the audit certification to the blockchain.
+
+```bash
+poetry run python3 -m audit
+```
+
 ### Project Details
 
 #### General Idea (2-3 sentences)
