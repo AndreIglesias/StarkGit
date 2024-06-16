@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 def clone_repo(repo_url):
-    print(repo_url)
+    print("REPO:", repo_url)
 
 
 @app.route("/audit", methods=["POST"])
@@ -18,4 +18,4 @@ def audit():
 
 
 if __name__ == "__main__":
-    app.run(host="::1", port=5000)
+    app.run(host="127.0.0.1", port=5000)
