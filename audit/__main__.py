@@ -6,7 +6,7 @@ import ast
 app = Flask(__name__)
 
 
-def clone_repo(repo_url):
+def clone_repo(repo_url: str):
     print("REPO:", repo_url)
 
 
