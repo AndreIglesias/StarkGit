@@ -31,3 +31,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 ## License
 
 [ISC](LICENSE) © 2024 AndreIglesias & 3lsy
+curl -X POST -H "Content-Type: application/json" -d "{\"repoUrl\": \"https://github.com/3lsy/auditcert\"}" localhost:5000/audit
