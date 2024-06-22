@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from audit.repo import clone_repo, analyze_repo
 import os
 import subprocess
 import ast
@@ -6,14 +7,15 @@ import ast
 app = Flask(__name__)
 
 
-def clone_repo(repo_url: str):
-    print("REPO:", repo_url)
+# def clone_repo(repo_url: str):
+#     print("REPO:", repo_url)
 
 
 @app.route("/audit", methods=["POST"])
 def audit():
     data = request.json
-    clone_repo(data["repoUrl"])
+    clone_path = clone_repo(data["repoUrl"])
+    analyze_repo(clone_path)
     return jsonify({"message": "Audit complete"}), 200
 
 
