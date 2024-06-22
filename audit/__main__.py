@@ -7,10 +7,6 @@ import ast
 app = Flask(__name__)
 
 
-# def clone_repo(repo_url: str):
-#     print("REPO:", repo_url)
-
-
 @app.route("/audit", methods=["POST"])
 def audit():
     data = request.json

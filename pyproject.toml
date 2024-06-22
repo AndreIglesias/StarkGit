@@ -13,6 +13,7 @@ jsonify = "^0.5"
 numpy = "^2.0.0"
 pandas = "^2.2.2"
 transformers = "^4.41.2"
+gitpython = "^3.1.43"
 
 
 [build-system]
