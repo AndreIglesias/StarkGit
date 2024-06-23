@@ -23,7 +23,7 @@ def supported_file(file_name: str) -> bool:
 
 
 # Step 1: Clone the repository
-def clone_repo(repo_url: str) -> str:
+def clone_repo(repo_url: str) -> tuple[str, str]:
     match = re.match(r"https://github.com/([^/]+)/([^/]+).git", repo_url)
     if not match:
         raise ValueError("Expected repo format: https://github.com/user/repo.git")
@@ -39,7 +39,8 @@ def clone_repo(repo_url: str) -> str:
             print("✅ Repository updated:", repo_url)
         except git.exc.GitCommandError as e:
             print(e)
-        return clone_path
+        commit_sha = git.Repo(clone_path).head.commit.hexsha
+        return clone_path, commit_sha
     print(f"Cloning repository from {repo_url}")
     try:
         git.Repo.clone_from(repo_url, clone_path)
@@ -47,15 +48,19 @@ def clone_repo(repo_url: str) -> str:
         print("ℹ️  Clone path:", clone_path)
     except git.exc.GitCommandError as e:
         print(e)
-    return clone_path
+    commit_sha = git.Repo(clone_path).head.commit.hexsha
+    return clone_path, commit_sha
 
 
 # Step 2: Analyze the repository
-def analyze_repo(clone_path: str):
-    print("Analyzing repository:", clone_path)
+def analyze_repo(
+    clone_path: str, REPORTS: dict, VULNERABILITIES: dict
+) -> tuple[dict, dict]:
+
+    print("🔍 Analyzing repository:", clone_path)
     files = {"File": [], "Content": []}
     for root, _, filenames in os.walk(clone_path):
-        print(f"📁 {root}")
+        print(f"📁 {root.replace(clone_path, '')}")
         for filename in filenames:
             file_path = os.path.join(root, filename)
             if not supported_file(file_path):
@@ -63,8 +68,12 @@ def analyze_repo(clone_path: str):
             print(f" 📄 {filename}")
             try:
                 with open(file_path, "r") as file:
+                    relative_path = file_path.replace(clone_path, "")
                     content = file.read()
-                    print(analyze_code(content))
+                    REPORTS, VULNERABILITIES = analyze_code(
+                        content, relative_path, REPORTS, VULNERABILITIES
+                    )
+                    print(f"{REPORTS[relative_path]}")
                     print(f"✅ Read file: {file_path}")
             except UnicodeDecodeError:
                 print(f"❌ Could not read file: {file_path}")
@@ -72,3 +81,4 @@ def analyze_repo(clone_path: str):
             files["File"].append(file_path)
             files["Content"].append(content)
     print("✅ Repository analyzed")
+    return REPORTS, VULNERABILITIES

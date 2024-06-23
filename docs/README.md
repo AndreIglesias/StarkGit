@@ -21,6 +21,35 @@ To run the Audit with AI server and upload the audit certification to the blockc
 poetry run python3 -m audit
 ```
 
+To test the analyzer, we can make a POST request to the API server.
+```bash
+curl -X POST -H "Content-Type: application/json" -d "{\"repoUrl\": \"https://github.com/andreiglesias/starkgit.git\"}" localhost:5000/audit | jq
+```
+To achieve a certification like this:
+```json
+{
+  "auditCertification": {
+    "commit": "68951b9a06dea0c3215bc896118202b6763e72cb",
+    "securityAnalysis": {
+      "reports": {
+        "audit/__init__.py": "Based on the provided code snippet, no sensitive data is directly exposed. However, I would recommend using environment variables from a secret management system instead of loading.env file directly. This mitigates the risk of exposing credentials if the file is accidentally committed to version control or falls into the wrong hands. Therefore, the report would read: 'Environment variables from a secret management system should be used instead of directly loading the.env file.'",
+        "audit/__main__.py": "No security vulnerabilities found.",
+        "audit/analysis.py": "No security vulnerabilities found.",
+        "audit/repo.py": "Multiple potential security vulnerabilities were found in the code:\n\n1. The 'git' library is used without proper authentication checks. This could potentially lead to man-in-the-middle attacks, cloning of malicious repositories, or unauthorized access to GitHub repositories.\n2. The 'open' function is used without any error handling or validation on the file_path. This could potentially lead to reading unintended files or attempting to read malicious files.\n3. The code uses string formatting. Without proper validation, this could potentially lead to format string vulnerabilities.\n\nIt",
+        "starkgit/src/index.ts": "No security vulnerabilities found.",
+        "starkgit/test/index.test.ts": "No security vulnerabilities found.",
+        "starkgit/vitest.config.ts": "No security vulnerabilities found."
+      },
+      "score": 0.7142857142857143,
+      "totalFiles": 7,
+      "vulnerabilitiesFound": 2
+    }
+  },
+  "auditDate": "2024-06-23T17:56:46Z",
+  "auditor": "StarkGit v1.0.0"
+}
+```
+
 ### Project Details
 
 #### General Idea (2-3 sentences)
