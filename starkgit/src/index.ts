@@ -1,12 +1,6 @@
 import { Probot } from "probot";
 import axios from "axios";
 
-// equivalent POST request with curl:
-// curl -X POST \             
-//      -H "Content-Type: application/json" \
-//      -d "{\"repoUrl\":\"$repoUrl\"}" \   
-//         http://\[::1\]:5000/audit
-
 export default (app: Probot) => {
   // Event handler for multiple events
   // Events: https://github.com/octokit/webhooks.js/?tab=readme-ov-file#webhook-events
