@@ -1,6 +1,5 @@
-# from audit import (
-# )
 import os, re, git
+from audit.analysis import analyze_code
 
 # REPONAME is the path where the repository will be cloned
 # clone_repo is a function that clones the repository
@@ -65,6 +64,7 @@ def analyze_repo(clone_path: str):
             try:
                 with open(file_path, "r") as file:
                     content = file.read()
+                    print(analyze_code(content))
                     print(f"✅ Read file: {file_path}")
             except UnicodeDecodeError:
                 print(f"❌ Could not read file: {file_path}")
