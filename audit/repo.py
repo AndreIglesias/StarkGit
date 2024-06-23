@@ -73,7 +73,6 @@ def analyze_repo(
                     REPORTS, VULNERABILITIES = analyze_code(
                         content, relative_path, REPORTS, VULNERABILITIES
                     )
-                    print(f"{REPORTS[relative_path]}")
                     print(f"✅ Read file: {file_path}")
             except UnicodeDecodeError:
                 print(f"❌ Could not read file: {file_path}")
