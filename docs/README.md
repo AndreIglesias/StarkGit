@@ -1,7 +1,8 @@
 # StarkGit
 
-AI Certified Audit on the Starknet Blockchian
+AI Certified Audit on the Starknet Blockchain
 
+https://github.com/AndreIglesias/StarkGit/assets/107457733/71766bed-9c29-4335-8222-d98fcff67f34
 
 ## How to run the app
 
